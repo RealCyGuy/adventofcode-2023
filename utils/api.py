@@ -1,13 +1,13 @@
-from typing import AnyStr
-
-import requests
 from os.path import exists
+from typing import AnyStr
 
 
 def get_input(day: int) -> AnyStr:
     path = f"../inputs/day {day}.txt"
 
     if not exists(path):
+        import requests
+
         with open("../cookie.txt") as f:
             cookies = {"session": f.read().strip()}
         response = requests.get(
