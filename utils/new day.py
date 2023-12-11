@@ -1,7 +1,7 @@
 import os
 
 for x in range(1, 33):
-    path = f"../day {x}"
+    path = f"../day {x:02d}"
     if not os.path.exists(path):
         os.mkdir(path)
         for part in range(1, 3):
